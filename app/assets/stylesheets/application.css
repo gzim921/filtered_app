@@ -12,4 +12,156 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
  */
+ .navigation {
+  background-color: rgba(255, 255, 255, .9);
+  border-bottom: solid lightsalmon 1px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 50px -10px #000000;
+}
+
+.menu {
+  background-color: rgba(0,0,0,.0)  !important;
+}
+
+.app-content {
+  margin-top:20px;
+  padding:20px;
+  border: solid lightsalmon 1px;
+  background-color: rgba(255, 255, 255, .9);
+  box-shadow: 0px 0px 50px -10px #000000;
+}
+
+.app-background {
+  background-image: url("https://image.freepik.com/free-photo/hot-espresso-coffee-bean-white-table_41050-2106.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: lightsteelblue;
+}
+
+.footer {
+  padding: 20px;
+  color: #000;
+}
+
+
+.errors {
+  padding: 20px;
+  font-weight:bolder;
+  border: solid lightsteelblue 1px;
+}
+.red, .red a {
+  color: red;
+}
+.green, .green a {
+  color: green;
+}
+
+.delete_button {
+  border: 0;
+  padding: 0;
+  background: none;
+  font-family: inherit;
+  font-size: 1.0em;
+  cursor: pointer;
+  font-weight: bold;
+  color: red;
+}
+
+.home_button {
+  background-color: white;
+  border: solid lightsalmon 1px;
+  border-radius: 4px;
+  font-size: medium;
+  color: black;
+  width: 200px;
+}
+
+.home_button:hover {
+  background-color: #f95f4d;
+  color: white;
+}
+
+.review_button {
+  background-color: white;
+  border: solid lightsalmon 1px;
+  border-radius: 4px;
+  font-size: medium;
+  color: black;
+}
+
+.review_button:hover {
+  background-color: #f95f4d;
+  color: white;
+}
+
+.button.success {
+  background-color: white;
+  border: solid lightsalmon 1px;
+  border-radius: 4px;
+  font-size: medium;
+}
+.button.success:hover {
+  background-color: #f95f4d;
+  color: white;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  color: #f95f4d;
+  font-weight: bold;
+} 
+
+h6, .h6 {
+  color: #1679ba;
+  margin-top: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-stretch: expanded;
+  font-size: 22px;
+  font-weight: bolder;
+  line-height: .4;
+}
+
+.hero {
+  color: #1679ba;
+  font-weight: bolder;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-stretch: expanded;
+  line-height: .8;
+}
+
+.card {
+  border: solid lightsalmon 1px;
+  background-color: rgba(255, 255, 255, 1.0);
+  box-shadow: 0px 0px 15px -10px #000000;
+  transition: .3s;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 20px -10px #000000;
+  transition: .3s;
+}
+
+.index_card {
+  max-height: 200px;
+}
+
+.image-section {
+  margin-top:10px;
+  display: block;
+  height: 110px;
+  width:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.coffee-image {
+  display: block;
+  height: 100px;
+  width:40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

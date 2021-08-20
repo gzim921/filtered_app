@@ -1,0 +1,8 @@
+<div class="cell">
+    <div class="card">
+            <div class="card-section">
+                <%= link_to Coffeee.find(review.coffeee_id).name, coffeee_review_path(review.coffeee_id, review) %><br>
+                <%= review.rating%> Stars
+            </div>
+    </div>
+</div>

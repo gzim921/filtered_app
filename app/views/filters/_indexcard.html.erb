@@ -1,0 +1,8 @@
+<div class="cell">
+    <div class="card index_card">
+        <div class="image-section" style="background-image: url('<%= review.coffeee.imgurl %>');"></div>
+        <div class="card-section">
+            <%= link_to Coffeee.find(review.coffeee_id).name, coffeee_review_path(review.coffeee_id, review) %><br>
+        </div>
+    </div>
+</div>

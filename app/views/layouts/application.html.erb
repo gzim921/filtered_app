@@ -1,16 +1,54 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FilterApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Filtered - For Coffee Lovers" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'true' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="grid-container full app-background">
+
+    <div class="grid-x grid-padding-x top-bar navigation">
+      <div class="cell small-12 medium-1 align-center text-center"><h6><%= link_to "Filtered.", root_path %></h6></div>
+        <div class="cell small-12 medium-8">
+          <ul class="menu">
+            <li><%= link_to "Home", search_path %></li>
+            <li><%= link_to "Review New Coffee", new_coffeee_path  %></li>
+            <li><%= link_to "View Coffee List", coffeees_path  %></li>
+          </ul>
+      </div>
+      <div class="cell small-12 medium-2">
+        <ul class="menu align-right">
+        </ul>
+      </div>
+      <div class="cell small-12 medium-1"></div>
+    </div>
+
+    <div class="grid-x">
+      <div class="cell small-1"></div>
+      <div class="grid-x cell auto app-content" style="min-height: 700px;">
+        <% if !flash.empty? %>
+          <div class="cell grid-x grid-padding-x small-12 errors align-center text-center float-center" style="max-height: 65px;">
+            <% flash.each do |name, msg| -%>
+              <%= content_tag :div, msg, class: name %>
+            <% end -%>
+          </div>
+        <%end%>
+        <%= yield %>
+      </div>
+      <div class="cell small-1"></div>
+    </div>
+    <div class="grid-x footer">
+      <div class="float-center text-center">
+        <h6>Filtered</h6>
+        <span>© 2021</span>
+      </div>
+    </div>
   </body>
 </html>

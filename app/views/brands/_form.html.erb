@@ -1,0 +1,16 @@
+<%= form_for @brand, :html => {"data-abide" => ''} do |b| %>
+  <div class="field input-wrapper">
+    <%= b.text_field :name, list: "brands" , required: true %>
+    <datalist id="brands">
+      <% Brand.all.each do |brand|%>
+        <option value="<%=brand.name%>">
+      <%end%>
+    </datalist>
+  </div>
+  <div class="field">
+    <%= b.text_field :location %>
+  </div>
+  <div class="actions">
+    <%= b.submit "Edit Brand" %>
+  </div>
+<%end%>

@@ -1,0 +1,49 @@
+<div class="cell grid-x grid-padding-x small-12">
+  <div class="cell">
+  </div>
+</div>
+
+<div class="cell grid-x grid-padding-x small-12">
+  <div class="cell small-12 medium-2">
+
+    <%# Coffee Review Info %>
+      <p><%= link_to "Clear Filters", filters_path %></p>
+      <%= form_tag("/search", method: "post", :enforce_utf8 => false) do %>
+        <label>Favorite</label>
+        <%= select_tag "favorite", options_for_select(["Show Favorites"]), include_blank: true %>
+        <label>Category</label>
+        <%= select_tag "category", options_for_select(["Arabica", "Robusta", "Liberica", "Excelsa"]), include_blank: true %>
+        <label>Roast</label>
+        <%= select_tag "roast", options_for_select(["Light", "Medium", "Dark"]), include_blank: true %>
+        <label>Body</label>
+        <%= select_tag "body", options_for_select(["Medium", "Mid", "Full"]), include_blank: true %>
+        <label>Acidity</label>
+        <%= select_tag "acidity", options_for_select(["Low", "Medium", "High"]), include_blank: true %>
+        <%= submit_tag "Filter" %>
+      <% end %>
+
+  </div>
+  <div class="cell small-12 medium-1"></div>
+  <div class="cell small-12 medium-9">
+    <h3>Filtered Coffee Reviews</h3>
+    <div class="grid-x grid-margin-x small-up-2 medium-up-4">
+      <%if !@reviews.empty? %>
+        <% @reviews.each do |review| %>
+        <%= link_to render(partial: "filters/indexcard", locals: {review: review}), coffeee_review_path(review.coffeee_id, review) %>
+        <%end%>
+      <%else%>  
+        <div class="grid-x grid-margin-x auto">
+          <div class="cell">
+            <p><strong>Sorry, Either There are no coffees reviewed, or none available yet under that filter.</strong></p>
+            <p><%= link_to "Clear Filters", filters_path %></p>
+            <div class="card index_card">
+                  <div class="card-section">
+                      <%= link_to "Review A New Coffee", new_coffeee_path %>
+                  </div>
+            </div>
+          </div>
+        </div>
+      <%end%>  
+    </div>
+  </div>
+</div>

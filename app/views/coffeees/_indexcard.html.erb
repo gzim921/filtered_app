@@ -1,0 +1,13 @@
+<div class="cell">
+  <div class="card">
+    <div class="card-section">
+      <%= link_to c.name, coffeee_path(c) %><br>
+      <% if !c.brand.nil? %>
+          <small><%= c.brand.name%></small><br>
+      <%else%>
+          <small>N/A</small><br>
+      <%end%>
+      <%= c.reviews.count %> Reviews
+    </div>
+  </div>
+</div>
