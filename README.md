@@ -1,24 +1,23 @@
-# README
+# Ruby on Rails Portfolio Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
+# *Filtered.*
+An App When You can Filter.
 Things you may want to cover:
 
-* Ruby version
+## Introduction
+Filtered is a Ruby on Rails application with the goal of providing  search, and filter through coffee reviews and filter through the types of coffee by bean category, roast, body, and acidity to find new brands and their perfect cup of joe!
 
-* System dependencies
+# Technologies
+This application make use of:
+* [Ruby on Rails v6](https://rubyonrails.org/)
+* [Foundation Framework](https://get.foundation/sites/docs/)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Launch
+To launch and run Filtered.:
+* Clone the repo onto your local machine
+* ``` $ cd rails_final_project ```
+* ``` $ bundle install ```
+* ``` $ rails db:create db:migrate db:seed ```
+* ``` $ rails server ```
+* In your Broweser, view the URL: http://localhost:3000/
+* Enjoy!
